@@ -7,15 +7,13 @@
     --black-border: #26292D;
     --white: #fff;
     --purple: #5C62EC;
-    --orange: #F49C75;
-    --green:#62999D;
 
     --text-color: var(--black);
 
-    --dark-bg: var(--green);
+    --dark-bg: var(--black);
     --dark-border: var(--black-border);
     --header-text: var(--white);
-    --accent: var(--orange);
+    --accent: var(--purple);
 
     /* Light mode */
     --page-bg: var(--white);
@@ -27,8 +25,8 @@
 }
 
 .dark {
-     /* Dark mode */
-    --page-bg: #4B818D;
+    /* Dark mode */
+    --page-bg: #252526;
     --text-color: var(--white);
 
     --title-1: var(--accent);
