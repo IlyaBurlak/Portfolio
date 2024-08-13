@@ -50,7 +50,7 @@ const downloadButtonCV = document.getElementById('CV-btn')
 downloadButtonCV.addEventListener('click', (event) => {
     const link = document.createElement("a");
     link.href = './info/CV.docx';
-    link.download = 'IlyaBurlakCV.pdf'
+    link.download = 'IlyaBurlakCV.docx'
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
