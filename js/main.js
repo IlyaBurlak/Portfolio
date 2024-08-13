@@ -43,3 +43,15 @@ btnDarkMode.onclick = function () {
         localStorage.setItem("darkMode", "light");
     }
 };
+
+// Загрузка CV
+const downloadButtonCV = document.getElementById('CV-btn')
+
+downloadButtonCV.addEventListener('click', (event) => {
+    const link = document.createElement("a");
+    link.href = './info/CV.docx';
+    link.download = 'IlyaBurlakCV.pdf'
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+})
