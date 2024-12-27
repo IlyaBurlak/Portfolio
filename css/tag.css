@@ -1,0 +1,50 @@
+@import "./variables.css";
+
+/*Tags*/
+
+.tags{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+
+}
+
+.tag{
+    cursor: auto;
+    font-size: 20px;
+    background-color: coral;
+    border: 1px solid var(--dark-border);
+    border-radius: 20px ;
+    padding: 7px;
+    margin-right: 10px;
+    max-height: 50px;
+    width: 110px;
+
+}
+
+.vanilaJs{
+    background-color: #E0C800;
+    color: black;
+}
+.typeScript{
+    background-color: #3178C6;
+    border: 1px solid #007ACC;
+}
+
+.bootstrap{
+    background: linear-gradient(to bottom right, #7952B3, #673ab7); /* Линейный градиент сверху вниз */
+    color: white;
+}
+
+.vite {
+    background: linear-gradient(to bottom right, #646CFF, #3C4296);
+}
+
+.html{
+    background-color: #E34F26;
+}
+
+.css{
+    background-color: #1572B6;
+}
