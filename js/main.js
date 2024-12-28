@@ -1,57 +1,79 @@
-const btnDarkMode = document.querySelector(".dark-mode-btn");
+document.addEventListener("DOMContentLoaded", function() {
+    const btnDarkMode = document.querySelector(".dark-mode-btn");
 
-// 1. Проверка темной темы на уровне системных настроек
-if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ) {
-    btnDarkMode.classList.add("dark-mode-btn--active");
-	document.body.classList.add("dark");
-}
+    // 1. Проверка темной темы на уровне системных настроек
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        btnDarkMode.classList.add("dark-mode-btn--active");
+        document.body.classList.add("dark");
+    }
 
-// 2. Проверка темной темы в localStorage
-if (localStorage.getItem('darkMode') === 'dark') {
-    btnDarkMode.classList.add("dark-mode-btn--active");
-    document.body.classList.add("dark");
-} else if (localStorage.getItem("darkMode") === "light") {
-    btnDarkMode.classList.remove("dark-mode-btn--active");
-    document.body.classList.remove("dark");
-}
+    // 2. Проверка темной темы в localStorage
+    if (localStorage.getItem('darkMode') === 'dark') {
+        btnDarkMode.classList.add("dark-mode-btn--active");
+        document.body.classList.add("dark");
+    } else if (localStorage.getItem("darkMode") === "light") {
+        btnDarkMode.classList.remove("dark-mode-btn--active");
+        document.body.classList.remove("dark");
+    }
 
-// Если меняются системные настройки, меняем тему
-window
-    .matchMedia("(prefers-color-scheme: dark)")
-    .addEventListener("change", (event) => {
+    // Если меняются системные настройки, меняем тему
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
         const newColorScheme = event.matches ? "dark" : "light";
 
         if (newColorScheme === "dark") {
-			btnDarkMode.classList.add("dark-mode-btn--active");
-			document.body.classList.add("dark");
-			localStorage.setItem("darkMode", "dark");
-		} else {
-			btnDarkMode.classList.remove("dark-mode-btn--active");
-			document.body.classList.remove("dark");
-			localStorage.setItem("darkMode", "light");
-		}
+            btnDarkMode.classList.add("dark-mode-btn--active");
+            document.body.classList.add("dark");
+            localStorage.setItem("darkMode", "dark");
+        } else {
+            btnDarkMode.classList.remove("dark-mode-btn--active");
+            document.body.classList.remove("dark");
+            localStorage.setItem("darkMode", "light");
+        }
     });
 
-// Включение ночного режима по кнопке
-btnDarkMode.onclick = function () {
-    btnDarkMode.classList.toggle("dark-mode-btn--active");
-    const isDark = document.body.classList.toggle("dark");
+    // Включение темного режима по кнопке
+    btnDarkMode.onclick = function () {
+        btnDarkMode.classList.toggle("dark-mode-btn--active");
+        const isDark = document.body.classList.toggle("dark");
 
-    if (isDark) {
-        localStorage.setItem("darkMode", "dark");
-    } else {
-        localStorage.setItem("darkMode", "light");
+        if (isDark) {
+            localStorage.setItem("darkMode", "dark");
+        } else {
+            localStorage.setItem("darkMode", "light");
+        }
+    };
+
+    // Загрузка CV
+    const downloadButtonCV = document.getElementById('CV-btn');
+
+    downloadButtonCV.addEventListener('click', (event) => {
+        const link = document.createElement("a");
+        link.href = './info/CV.docx';
+        link.download = 'IlyaBurlakCV.docx';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+});
+
+// Переход по тегу
+function goToPage(button) {
+    const pages = {
+        vanillaJs: 'https://www.javascript.com/',
+        typeScript: 'https://www.typescriptlang.org/',
+        bootstrap: 'https://getbootstrap.com/',
+        vite: 'https://vitejs.dev/',
+        html: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+        css: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+        react: 'https://react.dev/'
+    };
+
+    const classList = button.classList;
+    for (let className of classList) {
+        if (pages[className]) {
+            window.open(pages[className], '_blank');
+            break;
+        }
     }
-};
+}
 
-// Загрузка CV
-const downloadButtonCV = document.getElementById('CV-btn')
-
-downloadButtonCV.addEventListener('click', (event) => {
-    const link = document.createElement("a");
-    link.href = './info/CV.docx';
-    link.download = 'IlyaBurlakCV.docx'
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-})
