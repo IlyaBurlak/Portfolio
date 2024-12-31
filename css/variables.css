@@ -7,6 +7,17 @@
     --white: #fff;
     --purple: #5C62EC;
 
+    /*color for tags */
+
+    --js-color:#E0C800;
+    --react-color:#61DAFB ;
+    --tp-color:#3178C6 ;
+    --vite-color: ;
+    --api-color:mediumturquoise;
+    --css-color:#1572B6;
+    --html-color:#E34F26;
+
+
     --text-color: var(--black);
 
     --dark-bg: var(--black);
