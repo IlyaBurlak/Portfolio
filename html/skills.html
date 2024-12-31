@@ -5,69 +5,143 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="../img/icons/creative-thinking.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>My portfolio</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <nav class="nav">
-        <div class="container">
-            <div class="nav-row">
-                <a href="../index.html" class="logo"><strong>My</strong> portfolio</a>
-
-                <button class="dark-mode-btn">
-                    <img src="../img/icons/sun.svg" alt="Light mode" class="dark-mode-btn__icon">
-                    <img src="../img/icons/moon.svg" alt="Dark mode" class="dark-mode-btn__icon">
-                </button>
-
-                <ul class="nav-list">
-                    <li class="nav-list__item"><a href="../index.html" class="nav-list__link">Projects</a></li>
-                    <li class="nav-list__item"><a href="./skills.html" class="nav-list__link nav-list__link--active">Skills</a></li>
-                    <li class="nav-list__item"><a href="contacts.html" class="nav-list__link">Contacts</a></li>
-                </ul>
-            </div>
+<nav class="nav">
+    <div class="container">
+        <div class="nav-row">
+            <a href="../index.html" class="logo"><strong>My</strong> portfolio</a>
+            <button class="dark-mode-btn">
+                <img src="../img/icons/sun.svg" alt="Light mode" class="dark-mode-btn__icon">
+                <img src="../img/icons/moon.svg" alt="Dark mode" class="dark-mode-btn__icon">
+            </button>
+            <ul class="nav-list">
+                <li class="nav-list__item"><a href="../index.html" class="nav-list__link">Projects</a></li>
+                <li class="nav-list__item"><a href="./skills.html" class="nav-list__link nav-list__link--active">Skills</a></li>
+                <li class="nav-list__item"><a href="contacts.html" class="nav-list__link">Contacts</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main class="section">
-        <div class="container">
-                <h1 class="title-1">Skills</h1>
+<main class="section">
+    <div class="container">
+        <h1 class="title-1">Skills</h1>
 
-                <ul class="content-list">
-                    <li class="content-list__item">
-                        <h2 class="title-2">Frontend</h2>
-                        <p>React, JavaScript, HTML, CSS</p>
-                    </li>
-                    <li class="content-list__item">
-                        <h2 class="title-2">Backend</h2>
-                        <p>NodeJS, SQL( Postgres, Mongo, Microsoft )</p>
-                    </li>
-                    <li class="content-list__item">
-                        <h2 class="title-2">Other</h2>
-                        <p>Bash, C# (OOP), Java , Algorithms and data structures </p>
-                    </li>
-                </ul>
-
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__wrapper">
-                <ul class="social">
-                    <li class="social__item"><a href="https://vk.com/fruit_doc"><img src="../img/icons/vk.svg" alt="Link"></a></li>
-                    <li class="social__item"><a href="#!"><img src="../img/icons/instagram.svg" alt="Link"></a></li>
-                    <li class="social__item"><a href="#!"><img src="../img/icons/twitter.svg" alt="Link"></a></li>
-                    <li class="social__item"><a href="https://github.com/IlyaBurlak"><img src="../img/icons/gitHub.svg" alt="Link"></a></li>
-                    <li class="social__item"><a href="#!"><img src="../img/icons/linkedIn.svg" alt="Link"></a></li>
-                </ul>
-                <div class="copyright">
-                    <p>© 2024 by Ilya Burlak</p>
+        <ul class="content-list">
+            <li class="content-list__item">
+                <h2 class="title-2">Frontend</h2>
+                <div class="skill">
+                    <span class="skill-icon"><i class="fab fa-react"></i></span>
+                    <span class="skill-name">React</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress: 50%; width: 50%;"></div>
+                        <span class="progress-percentage">50%</span>
+                    </div>
                 </div>
+                <div class="skill">
+                    <span class="skill-icon"><i class="fab fa-js"></i></span>
+                    <span class="skill-name">JavaScript</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress: 60%; width: 60%;"></div>
+                        <span class="progress-percentage">60%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-icon"><i class="fab fa-html5"></i></span>
+                    <span class="skill-name">HTML</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress: 70%; width: 70%;"></div>
+                        <span class="progress-percentage">70%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-icon"><i class="fab fa-css3-alt"></i></span>
+                    <span class="skill-name">CSS</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress: 70%; width: 70%;"></div>
+                        <span class="progress-percentage">70%</span>
+                    </div>
+                </div>
+            </li>
+            <li class="content-list__item">
+                <h2 class="title-2">Backend</h2>
+                <div class="skill">
+                    <span class="skill-icon"><i class="fab fa-node-js"></i></span>
+                    <span class="skill-name">NodeJS</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress: 40%; width: 40%;"></div>
+                        <span class="progress-percentage">40%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-icon"><i class="fas fa-database"></i></span>
+                    <span class="skill-name">SQL</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress: 70%; width: 70%;"></div>
+                        <span class="progress-percentage">70%</span>
+                    </div>
+                </div>
+            </li>
+            <li class="content-list__item">
+                <h2 class="title-2">Other</h2>
+                <div class="skill">
+                    <span class="skill-icon"><i class="fas fa-terminal"></i></span>
+                    <span class="skill-name">Bash</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress: 60%; width: 60%;"></div>
+                        <span class="progress-percentage">60%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-icon"><i class="fas fa-code"></i></span>
+                    <span class="skill-name">C# (OOP)</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress: 30%; width: 30%;"></div>
+                        <span class="progress-percentage">30%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-icon"><i class="fab fa-java"></i></span>
+                    <span class="skill-name">Java</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress: 30%; width: 30%;"></div>
+                        <span class="progress-percentage">30%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span class="skill-icon"><i class="fas fa-project-diagram"></i></span>
+                    <span class="skill-name">Algorithms & D.S.</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="--progress: 90%; width: 90%;"></div>
+                        <span class="progress-percentage">90%</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <ul class="social">
+                <li class="social__item"><a href="https://vk.com/fruit_doc"><img src="../img/icons/vk.svg" alt="Link"></a></li>
+                <li class="social__item"><a href="#!"><img src="../img/icons/instagram.svg" alt="Link"></a></li>
+                <li class="social__item"><a href="#!"><img src="../img/icons/twitter.svg" alt="Link"></a></li>
+                <li class="social__item"><a href="https://github.com/IlyaBurlak"><img src="../img/icons/gitHub.svg" alt="Link"></a></li>
+                <li class="social__item"><a href="#!"><img src="../img/icons/linkedIn.svg" alt="Link"></a></li>
+            </ul>
+            <div class="copyright">
+                <p>© 2024 by Ilya Burlak</p>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="../js/main.js"></script>
-
+<script src="../js/main.js"></script>
 </body>
 </html>
