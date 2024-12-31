@@ -65,7 +65,8 @@ function goToPage(button) {
         vite: 'https://vitejs.dev/',
         html: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
         css: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-        react: 'https://react.dev/'
+        react: 'https://react.dev/',
+        api:''
     };
 
     const classList = button.classList;
