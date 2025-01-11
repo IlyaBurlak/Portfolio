@@ -9,14 +9,19 @@
 
     /*color for tags */
 
-    --js-color:#E0C800;
-    --react-color:#61DAFB ;
-    --tp-color:#3178C6 ;
+    --js-color: #E0C800;
+    --react-color: #61DAFB ;
+    --tp-color: #3178C6 ;
     --vite-color: ;
-    --api-color:mediumturquoise;
-    --css-color:#1572B6;
-    --html-color:#E34F26;
+    --api-color: mediumturquoise;
+    --css-color: #1572B6;
+    --html-color: #E34F26;
 
+    /*color for filter*/
+
+    --lite: #90EE90;
+    --medium: #FFA500;
+    --hard: #DC143C;
 
     --text-color: var(--black);
 
